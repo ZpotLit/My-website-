@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZpotLit | Inspiring Innovation & Tech</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#0b0b0b;color:#fff;overflow-x:hidden;}
+header{background:#121212;padding:15px 25px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #222;position:sticky;top:0;z-index:1000;}
+header img{height:45px;width:auto;}
+header h1{color:red;font-size:22px;font-weight:700;display:flex;align-items:center;gap:10px;}
+nav a{color:#fff;margin:0 10px;text-decoration:none;font-weight:500;transition:0.3s;}
+nav a:hover{color:red;}
+.screen{display:none;position:absolute;top:80px;left:0;width:100%;height:calc(100vh - 100px);padding:30px;overflow-y:auto;animation:fade 0.5s ease;}
+.active{display:block;}
+@keyframes fade{from{opacity:0;}to{opacity:1;}}
+h2{color:red;margin-bottom:10px;}
+h3{color:red;margin-bottom:8px;margin-top:0;}
+p{margin-bottom:10px;line-height:1.7;}
+ul{margin-left:20px;list-style-type:disc;margin-bottom:10px;}
+li{margin-bottom:5px;}
+button{padding:10px 15px;background:red;color:#fff;border:none;border-radius:5px;cursor:pointer;}
+button:hover{background:#e60000;}
+form{display:flex;flex-direction:column;gap:10px;}
+input,textarea{padding:10px;border:none;border-radius:5px;background:#222;color:#fff;}
+.about-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:20px;}
+.column{background:#1a1a1a;padding:20px;border-radius:10px;box-shadow:0 0 10px rgba(255,0,0,0.3);}
+.column h3{margin-bottom:10px;}
+.column ul{margin-left:15px;}
+.hero{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;height:80vh;background:linear-gradient(135deg,#111,#1a1a1a);}
+.hero h2{font-size:28px;margin-bottom:10px;}
+.hero p{max-width:600px;margin-bottom:20px;}
+.hero img{height:100px;width:auto;margin-bottom:15px;}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.card{background:#1a1a1a;padding:20px;border-radius:10px;box-shadow:0 0 10px rgba(255,0,0,0.3);transition:all 0.3s ease;}
+.card:hover{transform:translateY(-5px);box-shadow:0 0 20px rgba(255,0,0,0.5);}
+footer{text-align:center;padding:10px 5px;background:#121212;color:#aaa;width:100%;font-size:12px;}
+.small-link{color:red;text-decoration:none;font-weight:500;}
+.small-link:hover{text-decoration:underline;}
+@media(max-width:480px){.hero h2{ font-size:22px; } .hero p{ font-size:14px; }}
+</style>
+</head>
+<body>
+
+<header>
+  <h1><img src="logo.png" alt="ZpotLit Logo"> ZpotLit</h1>
+  <nav>
+    <a href="#" onclick="showScreen('home')">Home</a>
+    <a href="#" onclick="showScreen('about')">About</a>
+    <a href="#" onclick="showScreen('projects')">Projects</a>
+    <a href="#" onclick="showScreen('gallery')">Gallery</a>
+    <a href="#" onclick="showScreen('contact')">Contact</a>
+  </nav>
+</header>
+
+<!-- HOME -->
+<div id="home" class="screen active">
+  <div class="hero">
+    <img src="logo.png" alt="ZpotLit Logo">
+    <h2>Inspiring Innovation & Tech</h2>
+    <p>Welcome to <b>ZpotLit</b> — where creativity meets technology. We help creators, developers, and innovators build digital experiences that make an impact.</p>
+    <p>Chat with us on WhatsApp</p>
+    <button onclick="openWhatsApp()">Click here</button>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="screen">
+  <h2>Our Vision, Mission & Core Values</h2>
+  <div class="about-columns">
+    <div class="column">
+      <h3>Vision</h3>
+      <p>To become Africa’s most innovative mobile tech hub, nurturing future creators who can turn imagination into global digital solutions through creativity, learning, and collaboration.</p>
+    </div>
+    <div class="column">
+      <h3>Mission</h3>
+      <p>Our mission is to simplify technology creation for everyone — empowering individuals to build functional, beautiful apps directly from their phones. We believe in accessible innovation and limitless creativity.</p>
+    </div>
+    <div class="column">
+      <h3>Core Values</h3>
+      <ul>
+        <li><strong>Innovation:</strong> We embrace creativity and encourage bold ideas.</li>
+        <li><strong>Accessibility:</strong> Making technology learning and creation available to everyone.</li>
+        <li><strong>Collaboration:</strong> Working together to build meaningful digital solutions.</li>
+        <li><strong>Integrity:</strong> We value honesty, transparency, and ethical practices.</li>
+        <li><strong>Excellence:</strong> Striving for the highest standards in everything we build.</li>
+      </ul>
+    </div>
+    <div class="column">
+      <h3>Aim</h3>
+      <p>To provide learning tools, mentorship, and a supportive ecosystem where innovators can grow, build, and deploy their projects confidently.</p>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<div id="projects" class="screen">
+  <h2>Our Projects</h2>
+  <div class="projects-grid">
+    <div class="card">
+      <h3>ZpotLearn</h3>
+      <p>An e-learning platform where users learn app development, web design, and mobile coding right from their phones.</p>
+    </div>
+    <div class="card">
+      <h3>ZpotStore</h3>
+      <p>A digital marketplace where creators can upload, share, and sell their apps, templates, and creative work.</p>
+    </div>
+    <div class="card">
+      <h3>ZpotConnect</h3>
+      <p>A community app for developers and innovators to connect, collaborate, and share ideas globally.</p>
+    </div>
+    <div class="card">
+      <h3>ZpotPlay</h3>
+      <p>Our gaming branch dedicated to building exciting, interactive mobile experiences for all users.</p>
+    </div>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<div id="gallery" class="screen">
+  <h2>Gallery</h2>
+  <div style="position:relative;max-width:800px;margin:20px auto;overflow:hidden;border-radius:10px;">
+    <div id="slides" style="display:flex;transition:transform 0.5s ease-in-out;">
+      <div style="min-width:100%;flex-shrink:0;">
+        <img src="images/image1.jpg" alt="Project 1" style="width:100%;border-radius:10px;">
+        <p style="color:#fff;text-align:center;">Project 1: ZpotLearn</p>
+      </div>
+      <div style="min-width:100%;flex-shrink:0;">
+        <img src="images/image2.jpg" alt="Project 2" style="width:100%;border-radius:10px;">
+        <p style="color:#fff;text-align:center;">Project 2: ZpotStore</p>
+      </div>
+      <div style="min-width:100%;flex-shrink:0;">
+        <img src="images/image3.jpg" alt="Project 3" style="width:100%;border-radius:10px;">
+        <p style="color:#fff;text-align:center;">Project 3: ZpotConnect</p>
+      </div>
+      <div style="min-width:100%;flex-shrink:0;">
+        <img src="images/image4.jpg" alt="Project 4" style="width:100%;border-radius:10px;">
+        <p style="color:#fff;text-align:center;">Project 4: ZpotPlay</p>
+      </div>
+      <!-- Add future slides here -->
+    </div>
+    <div style="position:absolute;top:50%;width:100%;display:flex;justify-content:space-between;transform:translateY(-50%);">
+      <button onclick="prevSlide()" style="background:rgba(255,0,0,0.7);border:none;padding:10px;border-radius:50%;cursor:pointer;color:#fff;">&#10094;</button>
+      <button onclick="nextSlide()" style="background:rgba(255,0,0,0.7);border:none;padding:10px;border-radius:50%;cursor:pointer;color:#fff;">&#10095;</button>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="screen">
+  <h2>Contact Us</h2>
+  <p>We’d love to hear from you! Fill the form below to get in touch.</p>
+
+  <form id="contactForm" action="https://formspree.io/f/xgvpyzka" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="_replyto" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <input type="hidden" name="_subject" value="Contact Form Submission">
+    <button type="submit">Send Message</button>
+  </form>
+  <p id="contactFeedback" style="color:lime; display:none;">Message submitted! Thank you.</p>
+
+  <h2 style="margin-top:30px;">Suggestion Box</h2>
+  <p>Got an idea or feature suggestion? Let’s hear it below 👇</p>
+
+  <form id="suggestionForm" action="https://formspree.io/f/xgvpyzka" method="POST">
+    <textarea name="suggestion" placeholder="Enter your suggestion..." required></textarea>
+    <input type="hidden" name="_subject" value="Suggestion Box Submission">
+    <button type="submit">Submit Suggestion</button>
+  </form>
+  <p id="suggestionFeedback" style="color:lime; display:none;">Suggestion submitted! Thank you.</p>
+
+  <p style="margin-top:20px;">📞 +2347014402070 | 📧 solomone393@gmail.com</p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2025 ZpotLit | All Rights Reserved</p>
+</footer>
+
+<script>
+function showScreen(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+function openWhatsApp() {
+  const number = "2347014402070";
+  const message = encodeURIComponent("Hello ZpotLit! I would like to know more.");
+  const url = `https://wa.me/${number}?text=${message}`;
+  window.open(url, "_blank");
+}
+
+// Contact form submission
+document.getElementById('contactForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const form = e.target;
+  fetch(form.action, {method: form.method, body: new FormData(form), headers:{'Accept':'application/json'}})
+  .then(response => {if(response.ok){document.getElementById('contactFeedback').style.display='block';form.reset();} else{alert("Error submitting form.");}});
+});
+
+// Suggestion form submission
+document.getElementById('suggestionForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const form = e.target;
+  fetch(form.action, {method: form.method, body: new FormData(form), headers:{'Accept':'application/json'}})
+  .then(response => {if(response.ok){document.getElementById('suggestionFeedback').style.display='block';form.reset();} else{alert("Error submitting suggestion.");}});
+});
+
+<!-- GALLERY -->
+<div id="gallery" class="screen">
+  <h2>Gallery</h2>
+  <div id="galleryContainer" style="position:relative;max-width:800px;margin:20px auto;overflow:hidden;border-radius:10px;background:#111;height:400px;">
+    <div id="slides" style="display:flex;height:100%;transition:transform 0.5s ease-in-out;">
+      <div style="min-width:100%;flex-shrink:0;height:100%;text-align:center;">
+        <img src="https://via.placeholder.com/800x400?text=Project+1" alt="Project 1" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">
+        <p style="color:#fff;text-align:center;margin-top:5px;">Project 1: ZpotLearn</p>
+      </div>
+      <div style="min-width:100%;flex-shrink:0;height:100%;text-align:center;">
+        <img src="https://via.placeholder.com/800x400?text=Project+2" alt="Project 2" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">
+        <p style="color:#fff;text-align:center;margin-top:5px;">Project 2: ZpotStore</p>
+      </div>
+      <div style="min-width:100%;flex-shrink:0;height:100%;text-align:center;">
+        <img src="https://via.placeholder.com/800x400?text=Project+3" alt="Project 3" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">
+        <p style="color:#fff;text-align:center;margin-top:5px;">Project 3: ZpotConnect</p>
+      </div>
+      <div style="min-width:100%;flex-shrink:0;height:100%;text-align:center;">
+        <img src="https://via.placeholder.com/800x400?text=Project+4" alt="Project 4" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">
+        <p style="color:#fff;text-align:center;margin-top:5px;">Project 4: ZpotPlay</p>
+      </div>
+    </div>
+    <div style="position:absolute;top:50%;width:100%;display:flex;justify-content:space-between;transform:translateY(-50%);">
+      <button onclick="prevSlide()" style="background:rgba(255,0,0,0.7);border:none;padding:10px;border-radius:50%;cursor:pointer;color:#fff;">&#10094;</button>
+      <button onclick="nextSlide()" style="background:rgba(255,0,0,0.7);border:none;padding:10px;border-radius:50%;cursor:pointer;color:#fff;">&#10095;</button>
+    </div>
+  </div>
+</div>
+
+<script>
+let currentSlide = 0;
+function showSlide(index){
+  const slides = document.getElementById('slides');
+  const total = slides.children.length;
+  if(index >= total) currentSlide = 0;
+  else if(index < 0) currentSlide = total - 1;
+  else currentSlide = index;
+  slides.style.transform = 'translateX(-'+(currentSlide*100)+'%)';
+}
+
+// Wait until gallery is visible before initializing interval
+function initGallerySlider(){
+  if(document.getElementById('gallery').classList.contains('active')){
+    setInterval(()=>{showSlide(currentSlide+1);},3000);
+  } else {
+    setTimeout(initGallerySlider, 500);
+  }
+}
+initGallerySlider();
+
+function nextSlide(){showSlide(currentSlide+1);}
+function prevSlide(){showSlide(currentSlide-1);}
+</script>// Gallery slider
